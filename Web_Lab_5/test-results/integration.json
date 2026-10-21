@@ -1,0 +1,202 @@
+[
+  {
+    "check": "Home page",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Protected cabinet",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "CSRF required",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Invalid email rejected",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Client registration",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Duplicate email rejected",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Unverified client cannot order",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Resend cooldown",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Verification GET only previews",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Verification POST",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Token cannot be reused",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Profile update",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Identical route rejected and service options preserved",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Capacity validated on server",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Past departure rejected",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Fractional passengers rejected",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Create order and queue email",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Order awaits email",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Second client registration",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Foreign order hidden",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Foreign order cannot be updated",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Foreign order cannot be cancelled",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Foreign order cannot be deleted",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Concurrent confirmation is single use",
+    "passed": true,
+    "detail": "[303, 422]"
+  },
+  {
+    "check": "Confirmed order persisted",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Edit resets confirmation",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Old order link invalidated",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Failed edit preserves order id and form data",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "HTML escaped",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Expired token rejected",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Active order cannot be deleted",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Cancel order",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Cancelled order cannot be edited",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Delete cancelled order",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Unknown route is 404",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Logout",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Login rate limit",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Login with stored password hash",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "SMTP outage preserves order and pending job",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "SMTP retry delivers queued mail",
+    "passed": true,
+    "detail": ""
+  }
+]

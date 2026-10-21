@@ -1,0 +1,42 @@
+name: transport-registration-lab5
+services:
+  web:
+    build: .
+    ports: ["127.0.0.1:8086:80"]
+    environment:
+      DB_HOST: db
+      DB_NAME: transport_clients
+      DB_USER: transport
+      DB_PASS: ${DB_PASSWORD:-transport_local_password}
+      APP_URL: ${APP_URL:-http://127.0.0.1:8086}
+      SMTP_HOST: ${SMTP_HOST:-mailpit}
+      SMTP_PORT: ${SMTP_PORT:-1025}
+      SMTP_TLS: ${SMTP_TLS:-none}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      MAIL_FROM: ${MAIL_FROM:-noreply@transport.test}
+      DEMO_MAILBOX: ${DEMO_MAILBOX:-1}
+    depends_on:
+      db: {condition: service_healthy}
+      mailpit: {condition: service_started}
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile.db
+    environment:
+      MYSQL_DATABASE: transport_clients
+      MYSQL_USER: transport
+      MYSQL_PASSWORD: ${DB_PASSWORD:-transport_local_password}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root_local_password}
+    volumes:
+      - transport_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p\"$$MYSQL_ROOT_PASSWORD\" --silent"]
+      interval: 3s
+      timeout: 3s
+      retries: 40
+  mailpit:
+    image: axllent/mailpit:v1.27
+    ports: ["127.0.0.1:8026:8025"]
+volumes:
+  transport_data:
